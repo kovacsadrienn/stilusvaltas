@@ -10,39 +10,47 @@
      Példa: @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
    - Színpaletta generátor: https://coolors.co/
    - CSS referencia: https://developer.mozilla.org/en-US/docs/Web/CSS
+   - https://www.w3schools.com/Css/
    
    Sok sikert! 🎨
    ============================================ */
 
 
-/* --- GOOGLE FONTS IMPORTÁLÁS ---
-   Cseréld ki a saját választásodra!
-   -------------------------------- */
-/* @import url('https://fonts.googleapis.com/css2?family=VALASZD+KI&display=swap'); */
 
+
+@import url('https://fonts.googleapis.com/css2?family=VALASZD+KI&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
 
 /* --- ALAP BEÁLLÍTÁSOK --- */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    
+
 }
 
 body {
-    /* Háttérszín */
-    background-color: #ffffff;
-    /* Betűtípus */
-    font-family: sans-serif;
-    /* Betűszín */
-    color: #333333;
-    /* Sormagasság */
-    line-height: 1.6;
+    background: radial-gradient(circle,rgb(217, 166, 233) 0%, rgba(148, 187, 233, 1) 100%);
+    color: #141414;
+    font-family:Arial, Helvetica, sans-serif;
+    margin: 20% 15% 20% 15%;
+
+    
 }
 
 
-/* --- OLDAL KERET --- */
+
+p {
+    text-align: justify;
+    font-size: 10pt;
+    line-height: 18px;
+}
+
+
 .oldal-keret {
-    /* Az egész oldal kerete / szélessége */
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 30px;
+    padding: 30px;
+    
+   
 }
 
 
@@ -53,6 +61,8 @@ body {
 
 .fooldal-cim {
     /* Főcím stílusa */
+    text-align: center;
+    font-family: "Space Grotesk", sans-serif;
 }
 
 .kiemeles {
@@ -61,6 +71,7 @@ body {
 
 .alcim {
     /* Alcím stílusa */
+    font-family: "Space Grotesk", sans-serif;
 }
 
 
@@ -76,17 +87,27 @@ body {
 
 /* --- KÁRTYÁK (a fő tartalom elemei) --- */
 .kartya {
-    /* Háttér, padding, margin, border, border-radius, box-shadow */
+    margin-bottom: 50px;
+}
+
+#szabalyok {
+    background-color: white;
+    padding: 10px 20px 10px 20px;
+    font-size: 10pt;
+    border-radius: 15px;
+    
 }
 
 .kartya-cim {
     /* Kártya címek stílusa */
+    font-family: "Space Grotesk", sans-serif;
+    text-align: center;
 }
 
 
 /* --- SZABÁLYOK LISTA --- */
 .szabaly-lista {
-    /* Lista stílus (list-style, padding) */
+    padding-left: 30px;
 }
 
 .szabaly {
@@ -96,11 +117,9 @@ body {
 
 /* --- INSPIRÁCIÓ RÁCS --- */
 .inspiracio-racsozat {
-    /* Használj flexbox-ot a 4 elem elrendezéséhez!
-       display: flex;
-       flex-wrap: wrap;
-       gap: ...;
-    */
+
+    
+   
 }
 
 .inspiracio-elem {
