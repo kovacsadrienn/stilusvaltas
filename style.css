@@ -15,177 +15,308 @@
    Sok sikert! 🎨
    ============================================ */
 
+@import url("https://fonts.googleapis.com/css2?family=VALASZD+KI&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
 
+@keyframes colorChange {
+  0% {
+    color: rgb(0, 189, 179);
+  }
 
+  50% {
+    color: rgb(255, 193, 48);
+  }
 
-@import url('https://fonts.googleapis.com/css2?family=VALASZD+KI&display=swap'); 
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+  100% {
+    color: rgb(0, 189, 179);
+  }
+}
+
+@keyframes colorChangeBorder {
+  0% {
+    border-color: rgb(0, 189, 179);
+  }
+
+  50% {
+    border-color: rgb(255, 193, 48);
+  }
+
+  100% {
+    border-color: rgb(0, 189, 179);
+  }
+}
 
 /* --- ALAP BEÁLLÍTÁSOK --- */
-* {
-    
-
-}
 
 body {
-    background: radial-gradient(circle,rgb(217, 166, 233) 0%, rgba(148, 187, 233, 1) 100%);
-    color: #141414;
-    font-family:Arial, Helvetica, sans-serif;
-    margin: 20% 15% 20% 15%;
-
-    
+  background-position: right top;
+  background-attachment: scroll;
+  background-image:
+    radial-gradient(rgb(0, 0, 0, 1) 40%, rgba(0, 0, 0, 0.7) 100%),
+    url(img/noise.gif);
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 5% 25% 5% 25%;
+  color: aliceblue;
 }
 
+::selection {
+  color: black;
+  background-color: rgb(255, 193, 48);
+}
 
+h1 {
+  margin: 0;
+  -webkit-user-select: none;
+}
+
+h2 {
+  margin: 0;
+  -webkit-user-select: none;
+}
+
+h3 {
+  text-align: center;
+  margin: 0;
+  -webkit-user-select: none;
+}
+
+h3:hover {
+}
+
+h4 {
+  margin: 0;
+}
 
 p {
-    text-align: justify;
-    font-size: 10pt;
-    line-height: 18px;
+  font-size: 10pt;
+  line-height: 24px;
+  margin: 0;
 }
-
-
-.oldal-keret {
-    background-color: rgba(255, 255, 255, 0.8);
-    border-radius: 30px;
-    padding: 30px;
-    
-   
-}
-
 
 /* --- FEJLÉC --- */
 .fejlec {
-    /* Háttér, padding, szöveg igazítás */
+  font-family: "Space Grotesk", sans-serif;
+  text-align: center;
+  -webkit-user-select: none;
+  margin-bottom: 80px;
 }
 
 .fooldal-cim {
-    /* Főcím stílusa */
-    text-align: center;
-    font-family: "Space Grotesk", sans-serif;
+  font-size: 5rem;
+  font-weight: 900;
+  color: aliceblue;
 }
 
 .kiemeles {
-    /* A "CSS" szó kiemelése a címben */
+  animation-name: colorChange;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
 }
 
 .alcim {
-    /* Alcím stílusa */
-    font-family: "Space Grotesk", sans-serif;
+  font-size: 2.5rem;
+  font-weight: 400;
+  color: aliceblue;
+  transition: all 0.3s;
 }
-
 
 /* --- BEVEZETŐ --- */
 .bevezeto {
-    /* A bevezető szekció háttere, padding-ja */
-}
-
-.bevezeto-szoveg p {
-    /* Bevezető bekezdések */
+  margin-bottom: 50px;
+  color: aliceblue;
+  text-align: justify;
 }
 
 
 /* --- KÁRTYÁK (a fő tartalom elemei) --- */
 .kartya {
-    margin-bottom: 50px;
+  margin-bottom: 50px;
+}
+
+#mi-ez {
+  margin-bottom: 50px;
+  background-color: aliceblue;
+  border-radius: 20px;
+
+  padding: 30px;
+  color: black;
+  text-align: justify;
 }
 
 #szabalyok {
-    background-color: white;
-    padding: 10px 20px 10px 20px;
-    font-size: 10pt;
-    border-radius: 15px;
-    
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  padding-left: 50px;
 }
 
 .kartya-cim {
-    /* Kártya címek stílusa */
-    font-family: "Space Grotesk", sans-serif;
-    text-align: center;
+  font-family: "Space Grotesk", sans-serif;
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
 }
-
 
 /* --- SZABÁLYOK LISTA --- */
 .szabaly-lista {
-    padding-left: 30px;
+  flex-basis: 60%;
+  padding-left: 50px;
+  list-style-type: square;
+  line-height: 24pt;
+  font-size: 10pt;
 }
 
-.szabaly {
-    /* Egyes szabály elemek */
+::marker {
+  color: rgb(0, 189, 179);
 }
+
 
 
 /* --- INSPIRÁCIÓ RÁCS --- */
 .inspiracio-racsozat {
+  padding: 20px 0ps 20ps 0px;
 
-    
-   
+  margin: 20px 0px 20px 0px;
 }
 
 .inspiracio-elem {
-    /* Egyes inspiráció kártyák */
+  display: flex;
+  align-items: center;
+  padding: 10px 0px 10px 0px;
+  text-align: left;
+  border-top-style: solid;
+  border-width: 1px;
+  border-color: white;
+  justify-content: left;
 }
 
 .inspiracio-elem h4 {
-    /* Inspiráció alcímek */
+  padding-right: 20px;
+  flex-basis: 100px;
+  font-family: "Space Grotesk", sans-serif;
+  color: rgb(255, 193, 48);
+  /* width: 100px; */
+  flex-shrink: 0;
 }
 
+#inspiracio {
+  padding: 30px;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 20px;
+  animation-name: colorChangeBorder;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
 
 /* --- TECHNOLÓGIA BADGE-EK --- */
+
+#technologiak {
+}
+
 .tech-lista {
-    /* Flexbox elrendezés a badge-ekhez */
+  display: flex;
+  /* justify-content: space-between; */
+  flex-wrap: wrap;
 }
 
 .tech-badge {
-    /* Kis címkék stílusa: háttér, padding, border-radius */
+  font-family: "Space Grotesk", sans-serif;
+  cursor: pointer;
+  -webkit-user-select: none;
+  font-size: 10pt;
+  border-color: rgba(255, 255, 255, 1);
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 20px;
+  padding: 5px 15px 5px 15px;
+  margin: 5px 2px 5px 3px;
+  transition: all 0.3s;
 }
 
+.tech-badge:hover {
+  font-family: "Space Grotesk", sans-serif;
+  cursor: pointer;
+  -webkit-user-select: none;
+  font-size: 10pt;
+  background-color: rgb(255, 193, 48);
+  border-color: rgb(0, 189, 179);
+  color: rgb(0, 189, 179);
+  font-weight: 800;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 20px;
+  padding: 5px 15px 5px 15px;
+  margin: 5px 10px 5px 10px;
+  transform: scaleX(1.1);
+}
 
 /* --- OLDALSÁV --- */
+
+.hasznos-linkek {
+}
 .oldalsav {
-    /* Oldalsáv háttere, pozíciója */
+  margin-bottom: 50px;
+  text-align: left;
+  display: flex;
+  justify-content: space-around;
 }
 
 .oldalsav-cim {
-    /* Oldalsáv címek */
+  margin-top: 50px;
+  margin-bottom: 20px;
 }
-
-.szerzo-nev {
-    /* Szerző neve — írd át a CSS-ben is ha akarod kiemelni */
-}
-
 
 /* --- LINKEK --- */
 .link-lista {
-    /* Link lista stílus */
+  font-size: 10pt;
+  list-style-type: none;
+  line-height: 20pt;
+  list-style-position: inside;
+  margin-left: 0px;
+  padding-left: 0px;
 }
 
 .kulso-link {
-    /* Link stílus: szín, text-decoration */
+  color: rgb(0, 189, 179);
 }
 
-.kulso-link:hover {
-    /* Hover effekt a linkekre */
+.kulso-link:visited {
+  color: rgb(255, 193, 48);
 }
 
 
 /* --- LÁBLÉC --- */
 .lablec {
-    /* Lábléc háttér, padding, szöveg */
+  margin-top: 50px;
+  text-align: center;
 }
 
 .lablec-megjegyzes {
-    /* Kis megjegyzés a láblécben */
+  text-align: center;
+  color: rgb(255, 193, 48);
+  font-size: 8pt;
 }
 
+@media (max-width: 1000px) {
+  body {
+    background-position: right top;
+    background-attachment: scroll;
+    background-image:
+      radial-gradient(rgb(0, 0, 0, 1) 40%, rgba(0, 0, 0, 0.7) 100%),
+      url(img/noise.gif);
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 10%;
+  }
 
-/* --- EXTRA: Hover effektek, átmenetek ---
-   Próbálj ki transition-öket!
-   Példa:
-   .kartya {
-       transition: transform 0.3s ease;
-   }
-   .kartya:hover {
-       transform: scale(1.02);
-   }
-   ---------------------------------------- */
+  .fooldal-cim {
+    font-size: 3rem;
+    font-weight: 900;
+  }
+
+  .alcim {
+    font-size: 1.5rem;
+    font-weight: 400;
+  }
+}
